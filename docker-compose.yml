@@ -1,11 +1,11 @@
 version: "3"
 services:
   blog-ppikarabuk:
-    container_name: blog-ppikarabuk
+    container_name: Blog-PPIKarabuk
     build:
       context: .
       dockerfile: Dockerfile.prod
-    image: blog-ppikarabuk:latest
+    image: blog-ppik:latest
     restart: unless-stopped
     env_file: .env
     environment:
