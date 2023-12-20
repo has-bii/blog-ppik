@@ -683,6 +683,7 @@ export interface ApiBlogBlog extends Schema.CollectionType {
     singularName: 'blog';
     pluralName: 'blogs';
     displayName: 'Blog';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -702,6 +703,7 @@ export interface ApiBlogBlog extends Schema.CollectionType {
     tags: Attribute.Relation<'api::blog.blog', 'oneToMany', 'api::tag.tag'>;
     author: Attribute.Relation<'api::blog.blog', 'oneToOne', 'admin::user'>;
     editor: Attribute.Relation<'api::blog.blog', 'oneToOne', 'admin::user'>;
+    visited: Attribute.BigInteger;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
